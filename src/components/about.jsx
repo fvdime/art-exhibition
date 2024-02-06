@@ -10,7 +10,7 @@ const paragraph2 =
 
 const About = () => {
   return (
-    <section className="h-full max-w-screen-md mx-auto px-4 md:p-0">
+    <section className="h-full max-w-screen-md mx-auto px-4 lg:p-0">
       <div className="flex flex-col justify-center items-center">
         <div className="w-full h-screen flex flex-col items-center justify-between">
           <nav className="py-4 w-full flex flex-row justify-between items-center font-mono">
