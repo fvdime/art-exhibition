@@ -22,12 +22,12 @@ const Column = ({ images, y }) => {
   return (
     <motion.div
       style={{ y }}
-      className="relative h-full w-1/3 min-w-[250px] flex flex-col gap-[2vw] whitespace-nowrap [&>*:nth-child(1)]:-top-[40%] [&>*:nth-child(2)]:-top-[80%] [&>*:nth-child(4)]:-top-[60%]"
+      className="relative h-full w-1/3 min-w-[256px] flex flex-col gap-[1vw] whitespace-nowrap [&>*:nth-child(1)]:-top-[35%] [&>*:nth-child(2)]:-top-[70%] [&>*:nth-child(4)]:-top-[60%]"
     >
       {images.map((src, i) => (
         <div
           key={i}
-          className="h-1/3 w-full absolute rounded-[1vw] overflow-hidden"
+          className="h-1/3 w-full absolute rounded overflow-hidden"
         >
           <Image src={`/${src}`} alt="image" fill className="object-cover" />
         </div>
@@ -75,7 +75,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="h-[175vh] overflow-hidden bg-zinc-600">
+      <div className="h-[175vh] overflow-hidden bg-zinc-900">
         <div className="relative -top-[12.5vh] h-[200vh] flex gap-[2vw] p-[2vw]">
           <Column y={y} images={[images[0], images[1], images[2]]} />
           <Column y={y2} images={[images[3], images[4], images[5]]} />
