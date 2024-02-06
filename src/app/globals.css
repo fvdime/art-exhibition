@@ -10,3 +10,8 @@
   0% { left: 0; }
   100% { left: -100%; }
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

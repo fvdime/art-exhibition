@@ -18,11 +18,11 @@ const HeroBanner = () => {
         <div className="max-w-screen-lg mx-auto h-full py-4 px-4 md:px-0">
           <nav className="w-full flex flex-row h-8 justify-between items-center">
             <Link href="/" className="font-mono">
-              ファヤ
+              the.faya.
             </Link>
 
             <div className="w-1/3 md:w-1/4 flex items-center justify-between text-sm font-mono">
-              <Link href="/contact" className="hover:underline">
+              <Link href="/" className="hover:underline">
                 Contact
               </Link>
               <Link href="/about" className="hover:underline">
