@@ -29,13 +29,10 @@ const Footer = () => {
           <h1 className="text-xl self-start">faya</h1>
           <div className="flex flex-col w-full justify-center h-full items-end text-sm font-medium gap-8">
             <span className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              それってどう思う？
             </span>
             <span className="w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              assumenda similique nihil numquam repellendus deserunt a. Incidunt
-              laborum ullam rem, nesciunt ipsam, eos, rerum commodi culpa enim
-              hic quidem quos!
+              Allowing talent to languish through neglect is a tragedy of unprecedented magnitude. The regret that comes with such a realization is profound. The realization of being trapped in mediocrity feels like an indescribable emptiness.
             </span>
           </div>
         </div>
@@ -60,7 +57,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="hover:underline me-4 md:me-6">
+                <Link href="https://faya-indol.vercel.app" className="hover:underline me-4 md:me-6">
                   Contact
                 </Link>
               </li>

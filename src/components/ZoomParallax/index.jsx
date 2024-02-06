@@ -36,31 +36,31 @@ export default function Index() {
 
   const pictures = [
     {
-      src: "4.jpg",
+      src: "an.jpg",
       scale: scale4,
     },
     {
-      src: "1.jpg",
+      src: "ae.jpg",
       scale: scale5,
     },
     {
-      src: "2.jpg",
+      src: "acc.jpg",
       scale: scale6,
     },
     {
-      src: "3.jpg",
+      src: "o.jpg",
       scale: scale5,
     },
     {
-      src: "4.jpg",
+      src: "ay.jpg",
       scale: scale6,
     },
     {
-      src: "1.jpg",
+      src: "n.jpg",
       scale: scale8,
     },
     {
-      src: "3.jpg",
+      src: "r.jpg",
       scale: scale9,
     },
   ];
@@ -72,13 +72,12 @@ export default function Index() {
           return (
             <motion.div key={index} style={{ scale }} className={styles.imageWrapper}>
               <div className={styles.imageContainer}>
-                <Image src={`/${src}`} fill alt="image" />
+                <Image src={`${process.env.NEXT_PUBLIC_AMAZON_S3_BASE_URL}${src}`} fill alt="image" />
               </div>
             </motion.div>
           );
         })}
       </div>
-      <div className="styles.con"></div>
     </div>
   );
 }

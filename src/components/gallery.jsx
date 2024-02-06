@@ -6,16 +6,15 @@ import { useTransform, useScroll, motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "1.jpg",
-
+  "n.jpg",
+  "aa.jpg",
+  "abc.jpg",
+  "acc.jpg",
+  "af.jpg",
+  "acc.jpg",
+  "r.jpg",
+  "ac.jpg",
+  "ad.jpg",
 ];
 
 const Column = ({ images, y }) => {
@@ -29,7 +28,7 @@ const Column = ({ images, y }) => {
           key={i}
           className="h-1/3 w-full absolute rounded overflow-hidden"
         >
-          <Image src={`/${src}`} alt="image" fill className="object-cover" />
+          <Image src={`${process.env.NEXT_PUBLIC_AMAZON_S3_BASE_URL}${src}`} alt="image" fill className="object-cover" />
         </div>
       ))}
     </motion.div>
