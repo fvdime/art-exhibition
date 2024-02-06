@@ -11,7 +11,7 @@ const Footer = () => {
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
 
   return (
     <div className="h-[100vh] bg-zinc-950 text-white w-full">
@@ -19,7 +19,6 @@ const Footer = () => {
         ref={ref}
         style={{
           scale: scaleProgress,
-          opacity: opacityProgress,
         }}
         className="max-w-screen-lg mx-auto flex flex-col items-center justify-between p-4 lg:py-4 lg:px-0 h-full gap-4"
       >
@@ -45,15 +44,15 @@ const Footer = () => {
           <div className="p-4 md:p-0 flex items-center justify-between">
             <span className="sm:text-center text-zinc-300">
               © 2024{" "}
-              <Link href="/" className="hover:underline">
-                faya
+              <Link href="/" className="hover:underline me-3">
+                the.faya.
               </Link>
-              . All Rights Reserved.
+               All Rights Reserved.
             </span>
             <ul className="flex flex-wrap items-center mt-3 text-zinc-300 sm:mt-0">
               <li>
                 <Link
-                  href="#"
+                  href="https://github.com/fvdime/art-exhibition"
                   target="_blank"
                   className="hover:underline me-4 md:me-6"
                 >
@@ -61,7 +60,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline me-4 md:me-6">
+                <Link href="/" className="hover:underline me-4 md:me-6">
                   Contact
                 </Link>
               </li>
