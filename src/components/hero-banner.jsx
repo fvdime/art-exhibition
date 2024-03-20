@@ -49,11 +49,11 @@ const HeroBanner = () => {
               </div>
             </div>
             <h1 className="text-4xl font-semibold uppercase">with the world!</h1>
-            <div className="flex w-full justify-end h-1/3 items-end text-sm font-medium gap-8">
-              <span className="w-1/2 font-semibold">
+            <div className="flex w-full justify-center md:justify-end h-1/3 items-end text-sm font-medium gap-8">
+              <span className="w-1/2 font-semibold hidden md:flex">
                 もし生まれ変わるのなら私は木になりたい！
               </span>
-              <span className="w-1/2">
+              <span className="w-2/3 md:w-1/2">
                 At the.faya., you&apos;ll find a collection of my creative artworks, each piece a reflection of me. Every content on this site is crafted by my hands and made with -`♡´-. I&apos;m truly grateful for the time you&apos;ve dedicated and sincerely appreciate the interest you&apos;ve shown in my work. Welcome to the.faya.—where creativity knows no bounds.
               </span>
             </div>
