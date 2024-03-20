@@ -1,3 +1,107 @@
+# the.faya.
+
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
+<a name="readme-top"></a>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h3 align="center">the.faya. is a platform for my artworks.</h3>
+   <p align="center">
+    At the.faya., you'll find a collection of my creative artworks, each piece a reflection of me. Every content on this site is crafted by my hands and made with -`♡´-. 
+  </p>
+
+  <p align="center">
+    <a href="https://the-faya.vercel.app/">Live Demo</a>
+    ·
+    <a href="https://github.com/fvdime/art-exhibition/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/fvdime/art-exhibition/issues">Request Feature</a>
+  </p>
+</div>
+
+### Built With
+
+- Next JS
+- Amazon S3
+- Prisma
+- Mongo DB
+- Tailwind CSS
+
+<p align="right">(<a href="#readme-top">↑</a>)</p>
+
+## Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/fvdime/art-exhibition.git
+    ```
+   
+2. Install NPM packages:
+   ```bash
+   npm install
+    ``` 
+   
+3. Add .env file:
+   ```bash
+   DATABASE_URL="<DATABASE URL>"
+   NEXT_PUBLIC_AMAZON_S3_BASE_URL="<AWS S3 BASE URL>"
+    ```
+
+4. Prisma Commands:
+
+   ```bash
+   npx prisma db push
+   npx prisma generate
+   ```   
+
+5. Run the development server:
+
+   ```bash
+   npm run dev
+   ```   
+
+<p align="right">(<a href="#readme-top">↑</a>)</p>
+
+### Contact
+
+Contact: https://faya-indol.vercel.app/
+
+Mail: fadime.dogrulj@gmail.com
+
+Project Link: [https://github.com/fvdime/art-exhibition](https://github.com/fvdime/art-exhibition)
+
+<p align="right">(<a href="#readme-top">↑</a>)</p>
+
+### License
+
+MIT License
+
+Copyright (c) 2024 faya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+<p align="right">(<a href="#readme-top">↑</a>)</p>
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -15,19 +119,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
