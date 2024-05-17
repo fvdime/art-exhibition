@@ -1,12 +1,15 @@
 "use client";
 
+import { deleteWorkById } from "@/actions/post.action";
 import React from "react";
 
-const DeleteButton = () => {
+const DeleteButton = (workId) => {
   return (
     <button
       type="button"
-      onClick={() => {}}
+      onClick={async () => {
+        await deleteWorkById(workId);
+      }}
       className="text-xl font-bold shadow-xl text-center bg-red-50 p-2.5 rounded-full outline-none"
     >
       <svg

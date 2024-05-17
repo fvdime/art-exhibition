@@ -37,8 +37,8 @@ export default async function DashboardPage() {
                 />
               </div>
               <div className="absolute bottom-0 right-6 z-20 m-0 pb-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110">
-                <DeleteButton/>
-                <FeaturedButton isFeatured={work.featured}/>
+                <DeleteButton workId={work.id}/>
+                <FeaturedButton isFeatured={work.featured} workId={work.id} />
               </div>
             </div>
           ))}

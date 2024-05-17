@@ -1,18 +1,21 @@
 "use client";
 
+import { featuredWorkById } from "@/actions/post.action";
 import React from "react";
 
-const FeaturedButton = ({isFeatured}) => {
+const FeaturedButton = ({isFeatured, workId}) => {
   console.log(isFeatured)
   
   return (
     <button
       type="button"
-      onClick={() => {}}
+      onClick={async () => {
+        await featuredWorkById(workId);
+      }}
       className="text-xl font-bold shadow-xl text-center bg-red-50 p-2.5 rounded-full outline-none ms-2"
     >
       <svg
-        className="w-6 h-6 text-red-300 hover:text-red-900 transition-all ease duration-300"
+        className={`w-6 h-6  transition-all ease duration-300 ${isFeatured ? "text-red-950 hover:text-red-800" : "text-red-300 hover:text-red-900"}`}
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"

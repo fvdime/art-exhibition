@@ -3,6 +3,7 @@
 import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { uploadImage } from "@/lib/upload-image";
+import { revalidatePath } from "next/cache";
 
 export async function CreateWork(prevState, formData) {
   try {
@@ -46,9 +47,37 @@ export async function GetRandomWorks() {
   });
 }
 
-
 export async function GetWorkById(id) {
   return await prisma.work.findFirst({
     where: { id: id }
   })
+}
+
+export async function GetFeaturedWorks() {
+  return await prisma.work.findMany({
+    where: { 
+      featured: true
+    }
+  })
+}
+
+export const deleteWorkById = async (workId) => {
+  await prisma.work.delete({
+    where: { id: workId }
+  })
+
+  console.log("Deleted")
+  revalidatePath("/gallery")
+}
+
+export const featuredWorkById = async (workId) => {
+  await prisma.work.update({
+    where: { id: workId },
+    data: {
+      featured: true
+    }
+  })
+
+  console.log("updated")
+  revalidatePath("/gallery")
 }
