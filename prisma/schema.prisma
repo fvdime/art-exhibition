@@ -19,5 +19,5 @@ model Admin {
 model Work {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   image String
-  featured Boolean?
+  featured Boolean @default(false)
 }

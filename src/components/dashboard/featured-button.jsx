@@ -2,7 +2,9 @@
 
 import React from "react";
 
-const FeaturedButton = () => {
+const FeaturedButton = ({isFeatured}) => {
+  console.log(isFeatured)
+  
   return (
     <button
       type="button"

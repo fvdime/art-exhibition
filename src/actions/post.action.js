@@ -32,3 +32,18 @@ export async function CreateWork(prevState, formData) {
     error: "",
   };
 }
+
+
+export async function GetAllWorks() {
+  return prisma.work.findMany()
+}
+
+export async function GetRandomWorks() {
+  const worksCount = await prisma.work.count();
+  const skip = Math.floor(Math.random() * worksCount);
+  return await prisma.work.findMany({
+      take: 7,
+      skip: skip,
+  });
+
+}
