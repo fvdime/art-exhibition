@@ -10,8 +10,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Image {
+model Admin {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
-  slug String?
+  email String
+  password String
+}
+
+model Work {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  image String
   featured Boolean?
 }
