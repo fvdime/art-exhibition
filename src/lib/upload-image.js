@@ -3,15 +3,14 @@ import { randomUUID } from "crypto";
 
 const s3 = new S3Client({
   region: process.env.AWS_REGION,
-  //@ts-ignore
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 });
 
 const ACCEPTED_CONTENT_TYPES = ["png", "jpg", "svg", "jpeg"];
 
-export async function uploadImage(file, fileName, fileContent, bucketName) {
-  if (!file || !(file instanceof File)) {
+export async function uploadImage({file, fileName, fileContent, bucketName}) {
+  if (!file) {
     return null;
   }
 
