@@ -12,9 +12,7 @@ const GalleryPage = async () => {
   return (
     <main className="bg-zinc-950">
       <ZoomParallax random={random}/>
-      {works.map((work, index) => (
-        <Works key={work.id} image={work.image} id={work.id} index={index}/>
-        ))}
+      <Works works={works}/>
     </main>
   );
 };
