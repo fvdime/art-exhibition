@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // eslint-disable-next-line
 import styles from "./styles.module.scss";
 
-export default function Index() {
+export default function Index({random}) {
   
   useEffect(() => {
     const lenis = new Lenis();
@@ -34,36 +34,13 @@ export default function Index() {
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
-  const pictures = [
-    {
-      src: "an.jpg",
-      scale: scale4,
-    },
-    {
-      src: "ae.jpg",
-      scale: scale5,
-    },
-    {
-      src: "acc.jpg",
-      scale: scale6,
-    },
-    {
-      src: "o.jpg",
-      scale: scale5,
-    },
-    {
-      src: "ay.jpg",
-      scale: scale6,
-    },
-    {
-      src: "n.jpg",
-      scale: scale8,
-    },
-    {
-      src: "r.jpg",
-      scale: scale9,
-    },
-  ];
+  const pictures = random.map((rand, index) => {
+    const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9];
+    return {
+      src: rand.image,
+      scale: scales[index % scales.length],
+    };
+  });
 
   return (
     <div ref={container} className={styles.container}>

@@ -1,15 +1,15 @@
+import { GetFeaturedWorks } from "@/actions/post.action";
 import Footer from "@/components/footer";
 import Gallery from "@/components/gallery";
 import HeroBanner from "@/components/hero-banner";
-import Navbar from "@/components/navbar";
-import { GetGalleryImages } from "@/lib/action";
 
 export default async function Home() {
+  const featuredWorks = await GetFeaturedWorks()
 
   return (
     <>
       <HeroBanner />
-      <Gallery />
+      <Gallery featuredWorks={featuredWorks} />
       <Footer />
     </>
   );
