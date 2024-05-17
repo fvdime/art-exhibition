@@ -61,7 +61,7 @@ export async function GetFeaturedWorks() {
   })
 }
 
-export const deleteWorkById = async (workId) => {
+export const deleteWorkById = async ({workId}) => {
   await prisma.work.delete({
     where: { id: workId }
   })
