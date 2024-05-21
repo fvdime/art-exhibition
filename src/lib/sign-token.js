@@ -30,6 +30,6 @@ export const verifyJWT = async (token) => {
     return { email: payload.email, sub: payload.sub }
   } catch (error) {
     console.log(error);
-    throw new Error("Your token has expired.");
+    return null
   }
 };

@@ -1,6 +1,7 @@
 import { GetAllWorks } from "@/actions/post.action";
 import DeleteButton from "@/components/dashboard/delete-button";
 import FeaturedButton from "@/components/dashboard/featured-button";
+import LogoutButton from "@/components/dashboard/logout-button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -10,6 +11,12 @@ export default async function DashboardPage() {
 
   return (
     <div className="w-full min-h-screen bg-red-50 text-red-950">
+      <header
+      className="w-full h-fit border-b border-red-900 flex flex-row justify-between items-center max-w-screen-lg mx-auto p-2"
+      >
+        <h1 className="font-medium">the.faya.</h1>
+        <LogoutButton/>
+      </header>
       <div className="max-w-screen-lg mx-auto h-full p-4 md:py-4">
         <h1 className="text-2xl uppercase font-medium ">works</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
